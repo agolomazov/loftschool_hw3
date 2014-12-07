@@ -1,4 +1,8 @@
-@import 'base/index';
-@import 'layout/index';
-@import 'modules/index';
+//===Functions, Vars, Mixins, Placeholders
 @import 'tools/index';
+//===Base Properties
+@import 'base/index';
+//===Layout Properties
+@import 'layout/index';
+//===PAge Partials
+@import 'modules/index';

@@ -1,11 +1,11 @@
 //Global Container
-.container
+.container.show--share
 	//Share Buttons and Language Buttons
 	.container__globals
 		ul.globals__lang
 			li.lang__item
-				button.globals__btn Рус
-				button.globals__btn Eng
+				button.globals__btn.js-set-rus Рус
+				button.globals__btn.js-set-eng Eng
 		//Вырвнивается с помощью float, при наведении просто выезжает блок через margin: left
 		.socials
 			ul.socials__list
@@ -15,19 +15,19 @@
 					button.globals__btn.btn--socials.btn--tw Twitter
 				li.list__item
 					button.globals__btn.btn--socials.btn--vk Vkontakte
-			button.globals__btn.btn--socials_open Поделиться
+			button.globals__btn.btn--socials.btn--open Поделиться
 	//Generator container
 	.container__generator
 		.generator__result
 			h1.h1 Генератор водяных знаков
 			.result__block
 				.block__root
-					img.root__image(src = 'images/', alt = "картинка")
+					img.root__image(src = 'images/original-image.jpg', alt = "картинка")
 				//Если один вотермарк
 				.block__watermark
-					img.watermark__image(src = 'images/', alt = "картинка")
+					img.watermark__image(src = 'images/watermark-image.png', alt = "картинка")
 				//Если два вотермарка
-				table.block__watermark.watrmark--table
+				table.block__watermark.watrmark--table(style="display: none")
 					body.watrmark--table__body
 						tr.watrmark--table__raw
 							td.watrmark--table__cell
@@ -54,7 +54,7 @@
 							//Стилизуем загрузку
 							.upload-block__style
 								.form__input.style__input Image.png
-								.btn.btn--red.btn--upload
+								.btn.btn--red.btn--upload Загрузить
 							//Само поле загрузки, opacity: 0
 							input.form__input.input--upload&attributes({
 								type: "file",
@@ -67,7 +67,7 @@
 							//Стилизуем загрузку
 							.upload-block__style
 								.form__input.style__input Image.png
-								.btn.btn--red.btn--upload
+								.btn.btn--red.btn--upload Загрузить
 							//Само поле загрузки, opacity: 0
 							input.form__input.input--upload&attributes({
 								type: "file",
@@ -86,7 +86,7 @@
 						.positioning__block.block--coordinates
 							.positioning__visual
 								//Визуальное отображение расположения вотермарка
-								table.visual__table
+								table.visual__table()
 									tbody.table__body
 										tr.visual__raw
 											//При клике на кнопку будем сразу получать координаты кнопки в data атрибуте и интерпретировать касательно вотермарка
@@ -140,7 +140,7 @@
 									.switch__controls
 										button.btn.btn--control.btn--up.js-move-obj(data-direction="y-up") Больше
 										button.btn.btn--control.btn--down.js-move-obj(data-direction="y-down") Меньше	
-						.positioning__block.block--borders
+						.positioning__block.block--borders(style="display: none")
 							.positioning__visual
 								table.visual__table.table--borders
 									tbody.table__body
@@ -190,9 +190,8 @@
 						p.p Прозрачность
 						//TODO: Подключить default слайдер из jQuery UI и стилизовать его (http://jqueryui.com/slider/#default) 
 						.opacity__slider				
-				fieldset.form__block
+				fieldset.form__block.no--border
 					button.btn.btn--submit.btn--grey(type="reset") Сброс
 					button.btn.btn--submit.btn--red(type="submit") Скачать
 	footer#footer 
-		p.p.p--small
-			| &copy; 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+		p.p.p--small()!= footer

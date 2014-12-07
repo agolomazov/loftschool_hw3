@@ -1,0 +1,47 @@
+.form__block {
+	position: relative;
+	margin: 0 0 20px;
+	padding: 0 20px 5px;
+	width: $generator-settings-w - 2*20px;
+
+	&:after {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 11px;
+		background: transparent url('../images/form-border.png') no-repeat left center;
+		content: '';
+	}
+}
+
+.no--border {
+	&:after {
+		display: none;
+	}
+}
+
+.form__upload-block {
+	margin: 0 0 25px;
+}
+
+.form__input {
+	background-color: #fff;
+	border: 1px solid color('input-color');
+}
+
+.input--upload {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: $generator-settings-w - 2*20px;
+	height: 25px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+//===Positioning
+.visual__table {
+	background-color: rgba(#c1cfd9, .46);
+}

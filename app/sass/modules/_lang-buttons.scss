@@ -1,0 +1,23 @@
+.globals__lang {
+	margin: 0 0 18px;
+	font-size: 2rem;
+	color: color('grey');
+}
+
+.globals__btn {
+	display: block;
+	width: 43px;
+	height: 34px;
+	background-color: rgba(color('light-grey'), .7);
+	border-bottom: 1px solid rgba(color('btn-border'), .75);
+	text-align: center;
+	transition: all .25s ease-in-out;
+
+	&:hover {
+		color: color('dark-blue');
+	}
+
+	&:last-child {
+		border-bottom: none;
+	}
+}

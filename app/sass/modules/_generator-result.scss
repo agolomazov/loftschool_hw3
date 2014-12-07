@@ -1,0 +1,45 @@
+.generator__result {
+	position: relative;
+	float: left;
+	padding: 20px 25px 25px; 
+	width: $generator-result-w - 2*25px;
+	background-color: rgba(color('deep-blue'), .64);
+}
+
+.result__block {
+	position: relative;
+	width: 100%;
+	height: 534px;
+	background-color: #fff;
+}
+
+.block__root,
+.block__watermark {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.block__root {
+	width: 100%;
+	height: 100%;
+}
+
+.block__watermark {
+	margin: 12px 24px;
+	width: $generator-result-w - (2*25px + 2*24px);
+	height: 534px - 2*12px;
+}
+
+.root__image {
+	display: inline-block;
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.watermark__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

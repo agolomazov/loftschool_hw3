@@ -1,0 +1,9 @@
+.generator__settings {
+	position: relative;
+	height: 100%;
+	float: left;
+	padding: 25px 0;
+	width: $generator-settings-w - 1px;
+	background-color: color('light-grey');
+	border-left: 1px solid color('settings-border');
+}
